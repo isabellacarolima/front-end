@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapCar - Site</title>
+    
+    <style>
+        body {
+            background-color: aliceblue;
+            font-family:Arial, Helvetica, sans-serif;
+            color: black;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+       
+        /*reset básico*/
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /*importante para box model*/
+        }
+
+        header{
+            background-color: rgb(72, 189, 189);
+            
+            /*box model*/
+            padding: 20px;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        header h3{
+            color: beige;
+        }
+
+        nav a{
+            text-decoration: none;
+
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a button {
+            padding: 8px 15px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            background-color: #eee;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        /*seções*/
+        section {
+            background-color: #fff;
+            max-width: 1000px;
+            margin: 0 auto; /*centraliza a página*/
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        /*títulos*/
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        /*artigos*/
+        article{
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 15px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        /*lista*/
+        ul {
+            list-style-type:inside;
+        }
+        /*rodapé*/
+        footer {
+            background-color: #fff;
+            text-align: center;
+
+            /*box model*/
+            padding: 15px;
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        table {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 15px;
+            text-align: center;
+            border-radius: 5px;
+            margin: 0 auto;
+
+
+        }
+        p {
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SnapCar Experience - Plataforma de Compra Inteligente de Carros</h1>
+        <h3>Seu próximo carro , no seu ritmo</h3>
+        <nav>
+            <a href="#simular">Simular Finaciamento</a> 
+            <a href="#servicos">Sobre</a>
+            <a href="#Contato ">Contato</a>
+        </nav>
+    </header>
+
+        <main>
+            <section id="simular">
+                <h2>Catálogo de Carros</h2>
+                
+                <article>
+                    <p>Conheça nossos carros disponíveis:</p>
+                    <ul>
+                        <li>Onix Sedã</li>
+                        <li>Onix Hatch</li>
+                        <li>BMW X7</li>
+                        <li>Civic</li>
+                    </ul>
+                    <img src="" alt="Imagem dos Carros">
+                </article>
+
+                <article>
+                    <table border = "1">
+                        <thead>
+                            <tr>
+                                <th>Nome:</th>
+                                <th>Modelo:</th>
+                                <th>Preço:</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Onix</td>
+                                <td>Sedã</td>
+                                <td>R$ 75.000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Onix</td>
+                                <td>Hatch</td>
+                                <td>R$75.000,00</td>
+                            </tr>
+                            <tr>
+                                <td>BMW X7</td>
+                                <td>SUV</td>
+                                <td>R$ 110.000,00</td>
+                            </tr>
+                            <tr>
+                                <td>Civic</td>
+                                <td>Sedã</td>
+                                <td>R$ 88.000,00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article> <br>
+            </section> 
+
+            <section id="servicos">
+                <h2>Serviços</h2>
+                <p>Fazemos venda de carros semi-novos e novos.</p>
+            </section>
+                
+            <section id="Contato">   
+                <h2>Formas de Pagamento</h2>
+                <p>Parcelamos em até 48 vezes, compramos o seu carro ou trocamos</p>
+            </section>
+        </main>
+    <footer>
+        <p>&copy; Todos os direitos reseravados à ID</p>
+    </footer>
+</body>
+</html>
