@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    
+        <div class="container">
+         <h1>Cadastro</h1>
+            <form  onsubmit="alert('Dados salvos com sucesso!')">
+                Nome: <br>
+                <input type="text" name="nome" id="txtNone" required multiple> <br><br>
+                Data de nascimento <br>
+                <input type="date" name="nascimento" min="1950-01-01" max="2020-12-31" required multiple> <br><br>
+                E-mail: <br>
+                <input type="email" required multiple> <br><br>
+                Senha: <br>
+                <input type="password" name="senha" required multiple> <br><br>
+                Genêro: <br>
+                <input type="radio" name="genero" value="feminino" required multiple> Feminino
+                <input type="radio" name="genero" value="masculino" required multiple> Masculino 
+                <br><br>
+                Curso: <br>
+                <select name="curso" id="escolha">
+                    <option value="selecione">Selecione</option>
+                    <option value="DS">Desenvolvimento de Sistemas</option>
+                    <option value="info">Informática</option>
+                    <option value="redes">Redes</option>
+                </select required multiple> <br><br>
+                <button type="submit"> Enviar</button>
+            </form>
+        </div>
+        <script src="cadastro.js"></script>
+    
+</body>
+</html>
