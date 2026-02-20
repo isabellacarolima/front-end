@@ -1,0 +1,36 @@
+/*CARROSSEL*/ 
+.carrossel{
+    width: 700px;
+    height: 500px;  /*TAMANHO FIXO*/
+    margin: 30px auto 10px; 
+    overflow: hidden; /*CORTA O EXCESSO DE IMAGENS*/
+    border-radius: 10px;
+}
+
+/* IMAGENS */
+.carrossel img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ENCAIXA QUALQUER IMAGEM */
+    display: none;
+}
+
+/* IMAGEM ATIVA */
+.carrossel img.ativa{
+    display: block;
+}
+
+/* BOTÕES DO CARROSSEL */
+.botoes{
+    text-align: center;
+}
+.botoes button{
+    padding: 12px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(0, 183, 255);
+    color: white;
+    font-size: 16px;
+}
