@@ -1,0 +1,210 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Work Sans", sans-serif;
+    background-color: #F2EDEB;
+}
+header{
+    background-color: rgb(217, 165, 154);
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* garante que fique por cima de tudo*/
+}
+
+
+header img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+  
+    display: flex;
+}
+nav a{
+    padding-right: 10px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+main{
+    margin-top: 170px; 
+}
+.banner {
+    width: 100%;
+    height: 200px; /* ajuste como quiser */
+    background-image: url("img/banner.jpg");
+    background-size: cover;      /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza */
+    background-repeat: no-repeat; /* Não repete */
+    background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("img/banner.jpg") center/cover no-repeat;
+
+    display: flex;
+    justify-content: center; /* centraliza horizontal */
+    align-items: center;     /* centraliza vertical */
+}
+
+.banner p{
+    color: white;
+    font-size: 25px;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.713);
+}
+
+.sobre{
+    background-color: rgba(217, 165, 154, 0.363);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.616);
+}
+.sobre p{
+    color: white;
+    display: block;
+    font-size: 20px;
+    text-align: center;
+}
+
+.sobre h2{
+    color: white;
+    text-align: center;
+}
+.sobre li{
+    list-style: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+.sobre li:hover{
+    transform: scale(1.2);
+    font-size: 18px;
+}
+
+.produtos{
+    padding: 25px 0;
+    background-color: #8C5E54;
+}
+
+.contato {
+    padding: 80px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* espaço entre os blocos */
+    flex-wrap: wrap; /* quebra no mobile */
+}
+.contato-info {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    text-align: left;
+}
+
+.contato-info button {
+    border-radius: 20px;
+    padding: 8px;
+    width: 160px;
+    border: 1px solid gold;
+    background-color: #8C5E54;
+    color: gold;
+    transition: 0.3s;
+}
+
+.contato-info button:hover {
+    transform: scale(1.05);
+}
+
+.contato-form form {
+    padding-left: 20px;
+    border-left: 1px solid gold;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.contato-form input,
+.contato-form textarea {
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.contato-form button {
+    background-color: #8C5E54;
+    color: gold;
+    border: 1px solid gold;
+    padding: 8px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.contato-form button:hover{
+    transform: scale(1.05);
+}
+
+footer{
+    font-size: 17px;
+    border-top: 2px solid black;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    background-color: rgb(217, 165, 154);
+}
+
+footer h2{
+    color: gold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.61);
+}
+
+footer a{
+    color: white;
+    padding-left: 20px;
+    
+}
+h1{
+    color: gold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.61);
+    margin-top: -70px;
+    margin-bottom: 50px;
+}
+
+
+
+/*CARDS*/
+.card{
+    height: 100%;
+    transition: 0.3s;
+}
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
+}
+.card-img-top{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+/*BOTOES DO CARROSSEL*/
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg fill='%23D4AF37' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 1L3 8l8 7'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg fill='%23D4AF37' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 1l8 7-8 7'/%3E%3C/svg%3E");
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    opacity: 1;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(212, 175, 55, 0.2); /* dourado transparente */
+}

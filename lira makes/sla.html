@@ -1,0 +1,1299 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Lira Makes</title>
+  </head>
+
+  <body>
+    <header clas>    <!-- botão = carrinho-->
+     <button class="btn btn-light position-fixed top-0 end-0 m-3"
+             data-bs-toggle="offcanvas"
+             data-bs-target="#carrinho">
+       🛒 (<span id="contador">0</span>)
+     </button>
+
+     <div class="offcanvas offcanvas-end" id="carrinho">
+        <div class="offcanvas-header">
+            <h5>Carrinho</h5>
+            <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <ul id="lista-carrinho" class="list-group mb-3"></ul>
+
+                <h5>Total: R$ <span id="total">0</span></h5>
+
+                <button class="btn btn-success w-100" onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+     </div>
+    
+    <!-- CABEÇALHO -->
+    
+      <img src="logoliramakes.jpg" alt="Logo Lira Makes" />
+      <h1 class="text-center">Lira Makes</h1>
+      <nav class="container text-center">
+        <a href="#">Início</a>
+        <a href="#sobreEmpresa">Sobre</a>
+        <a href="#produtosDisponiveis">Produtos</a>
+        <a href="#contatoEmpresa">Contato</a>
+      </nav>
+      
+    </header>
+
+    <main>
+      <!-- BANNER PRINCIPAL -->
+      <section class="banner">
+        <div>
+          <p>Realçando sua Beleza e Autoestima</p>
+        </div>
+      </section>
+
+      <!-- SOBRE A EMPRESA-->
+      <section class="sobre" id="sobreEmpresa">
+        <p>
+          A Lira Makes nasceu com o propósito de tornar a maquiagem mais
+          acessível, oferecendo produtos de qualidade a preços justos. Criada
+          por alguém apaixonado pela beleza, a marca começou de forma simples e
+          vem crescendo por meio das redes sociais. ✨
+        </p>
+        <br />
+        <h2>Por que escolher Lira Makes?</h2>
+        <ul>
+          <li>Qualidade nos produtos</li>
+          <li>Atendimento especial ao Cliente</li>
+          <li>Honestidade e Transparência</li>
+          <li>Valorização da beleza individual</li>
+        </ul>
+      </section>
+
+      <!-- PRODUTOS -->
+      <section class="produtos" id="produtosDisponiveis">
+        <article id="produtosBase">
+          <div class="container pb-5">
+            <h2 class="text-center text-light">Conheça nossos produtos</h2>
+            <h2 class="text-light mb-4">Base</h2>
+
+            <div
+              id="carouselBase"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                  <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/base1.JPG" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>BASE LÍQUIDA FIORE - C2</h6>
+
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('Base Fiore', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/base2.JPG" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>BASE LÍQUIDA FIORE - ME1</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('Base Fiore ME1', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/base3.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>BASE LÍQUIDA FIORE - M3</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                         <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('Base Fiore ME3', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/base4.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>BASE LÍQUIDA FACE EFEITO MATTE - COR1</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('Base Efeito Matte cor1', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                  <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/base5.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>BASE LÍQUIDA FACE EFEITO MATTE - COR2</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('Base Matte cor2', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/base6.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>BASE LÍQUIDA SOFT MATTE</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('Base soft matte', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/base7.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>BASE ESSENCE SKIN</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('Base skin', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/base8.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>BASE LÍQUIDA FACE EFEITO MATTE</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('Base efeito matte', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Botões -->
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselBase"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselBase"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article id="produtosPo">
+          <div class="container pb-5">
+            <h2 class="text-light mb-4">Po</h2>
+
+            <div id="carouselPo" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                  <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/po1.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>PÓ FACIAL SOLTO - COR 01</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('PO FACILA SOLTO - COR 01', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/po2.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>PÓ FACIAL SOLTO - COR 02</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('PÓ FACIAL SOLTO - COR 02', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/po3.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>PÓ FACIAL SOLTO COR - 03</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('PÓ SOLTO COR - 03', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/po4.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>PÓ COMPACTO - COR 01</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('PÓ COMPACTO - COR 1', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                  <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/po5.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>PÓ COMPACTO - COR 06</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('PÓ COMPACTO COR 06', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/po6.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>PÓ COMPACTO - COR 03</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('PO COMPACTO COR 03', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/po7.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>PÓ COMPACTO - COR 04</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('PÓ COMPACTO COR 04', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/po8.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>PÓ COMPACTO - COR 05</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('PÓ COMPACTO COR 05', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Botões -->
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselPo"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselPo"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article id="produtosCorretivo">
+          <div class="container pb-5">
+            <h2 class="text-light mb-4">Corretivo</h2>
+
+            <div
+              id="carouselCorretivo"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                  <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/corretivo1.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>CORRETIVO LÍQ. HYALURONIC - COR 2</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('CORRETIVO LIQ. HYALURONIC', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/corretivo2.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>CORRETIVO LÍQ. HYALURONIC - COR 0.5</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('CORRETIVO LIQ. HYALURONIC COR 0.5', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/corretivo3.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>CORRETIVO LÍQ. HYALURONIC - COR 1</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('CORRETIVO LIQ HYALURONIC', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/corretivo4.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>CORRETIVO LÍQ. HYALURONIC - COR 4</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('CORRETIVO LIQ HYALURONIC COR 4', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                  <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/corretivo5.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>CORRETIVO LÍQ. HYALURONIC COR 4</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('CORRETIVO LIQ HYALURONIC COR 4', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/corretivo6.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>CORRETIVO LIQUIDO MARMORIZE - COR 1</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="btn btn-warning w-100">
+                          🛒 Comprar
+                        </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/corretivo7.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>CORRETIVO LIQUIDO MARMORIZE - COR 2</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('CORRETIVO LIQ MARMORIZE COR 2', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/corretivo8.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>CORRETIVO LIQUIDO MARMORIZE - COR 3</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('CORRETIVO LIQ MARMORIZE COR 3', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Botões -->
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselCorretivo"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselCorretivo"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article id="produtosIluminador">
+          <div class="container pb-5">
+            <h2 class="text-light mb-4">Iluminador</h2>
+
+            <div
+              id="carouselIluminador"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                  <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/iluminador1.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>ILUMINADOR GALAXY PLUTAO</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="btn btn-warning w-100">
+                          🛒 Comprar
+                        </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/iluminador2.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>ILUMINADOR COMPACTO CHAMPAGNE</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('ILUMINADOR CHAMPAGNE', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/iluminador3.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>ILUMINADOR COMPACTO GOLD</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('ILUMINADOR GOLD', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/iluminador4.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>ILUMINADOR COMPACTO ROSÊ</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('ILUMINADOR ROSE', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                  <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/iluminador5.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>ILUMINADOR COMPACTO BRANCA DE NEVE</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('ILUMINADOR BRANCA DE NEVE', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/iluminador6.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>ILUMINADOR COMPACTO RAINHA MÁ</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('ILUMINADOR RAINHA MA', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/iluminador7.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>ILUMINADOR STICK PRINCESAS</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('ILUMINADOR PRINCESAS', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/iluminador8.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>ILUMINADOR BAKED LOVELY</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('ILUMINADOR LOVELY', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Botões -->
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselIluminador"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselIluminador"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article id="produtosBatom">
+          <div class="container pb-5">
+            <h2 class="text-light mb-4">Batom</h2>
+
+            <div
+              id="carouselBatom"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                  <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/batom1.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>BATOM LÍQUIDO BRIDE</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('BATOM BRIDE', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/batom2.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>BATOM LÍQUIDO DOCE DESEJO</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('BATOM DOCE DESEJO', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/batom3.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>BATOM LÍQUIDO ESSÊNCIA</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('BATOM ESSÊNCIA', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/batom4.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>BATOM LÍQUIDO INFINITO</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('BATOM INFINITO', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                  <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/batom5.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>BATOM LÍQUIDO MAGIA</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('BATOM MAGIA', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/batom6.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>BATOM LÍQUIDO PRINCÍPIO</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('BATOM PRINCÍPIO', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/batom7.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>BATOM SOFT MATTE LOVELY</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('BATOM LOVELY', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/batom8.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>BATOM LÍQUIDO MATTE LOVELY</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('BATOM MATTE LOVELY', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Botões -->
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselBatom"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselBatom"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article id="produtosGloss">
+          <div class="container pb-5">
+            <h2 class="text-light mb-4">Gloss</h2>
+
+            <div
+              id="carouselGloss"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                  <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/gloss1.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>GLOSS LABIAL RUBI</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('Gloss RUBI', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/gloss2.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>GLOSS LABIAL AMETISTA</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('GLOSS AMETISTA', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/gloss3.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>GLOSS LABIAL ANGEL</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('GLOSS ANGEL', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/gloss4.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>GLOSS LABIAL CRYSTAL</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('GLOSS CRYSTAL', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                  <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/gloss5.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>GLOSS LABIAL CRYSTAL SHINE</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('GLOSS SHINE', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/gloss6.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>VOLUMIZER GLOSS</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('GLOSS VOLUMIZER', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/gloss7.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>GLOSS LABIAL LOVELY</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('GLOSS LOVELY', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/gloss8.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>GLOSS STICK</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('GLOSS STICK', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Botões -->
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselGloss"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselGloss"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article id="produtosAcessorioMake">
+          <div class="container pb-5">
+            <h2 class="text-light mb-4">Acessório de Maquiagens</h2>
+
+            <div
+              id="carouselAcessorioMake"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                  <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/acessorio1.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>CHAVEIRO GOLD GLOSS</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('CHAVEIRO GLOSS', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/acessorio2.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>PINCEL KABUKI PARA BASE</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('PINCEL BASE', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/acessorio3.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>PINCEL CHANFRADO PARA BLUSH</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('PINCEL BLUSH', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/acessorio4.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>PINCEL PARA PÓ</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('PINCEL PÓ', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                  <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/acessorio5.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>PINCEL PARA ILUMINADOR</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('PINCEL ILUMINADOR', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/acessorio6.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>PINCEL CHANFRADO PARA OLHOS</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('PINCEL OLHO', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/acessorio7.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>PINCEL PARA LÁBIOS</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('PINCEL LABIOS', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <div class="card">
+                        <img src="img/acessorio8.webp" class="card-img-top" alt="Base 1" />
+                        <div class="card-body text-center">
+                          <h6>PINCEL DUO PARA SOBRANCELHAS</h6>
+                          <p class="fw-bold text-success">R$ 39,90</p>
+
+                          <button class="byn btn-prumary w-100 mt-2"
+                           onclick="adicionarCarrinho('PINCEL SOBRANCELHAS', 39.90)">
+                           Comprar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Botões -->
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselAcessorioMake"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselAcessorioMake"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- CONTATO -->
+      <section class="contato" id="contatoEmpresa">
+        <div class="contato-info">
+            <h2>Contato</h2>
+            <button>WhastApp</button>
+            <button>Instagram</button>
+        </div>
+        
+          <div class="contato-form">
+              <form action="">
+                <p>Deixe uma mensagem para a empresa:</p>
+                <input type="text" placeholder="Seu nome" name="" id="" required/>
+                <br />
+                <textarea placeholder="Sua mensagem..." name="" id="" required></textarea>
+                <br />
+                <button type="submit">Enviar</button>
+              </form>
+          </div>
+        
+      </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="text-center">
+      <h2>Lira Makes</h2>
+      <p>&copy; Todos os direitos reservados a Lira Makes | 2026</p>
+      <p>Siga a gente em nossas redes socias!</p>
+      <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+ <script>
+    let carrinho = []
+
+    function adicionarCarrinho(nome,preco) {
+        carrinho.push({ nome, preco});
+        atualizarCarrinho();
+    }
+
+    function atualizarCarrinho() {
+        const lista = document.getElementById("lista-carrinho");
+        const contador = document.getElementById("contador");
+        const total = document.getElementById("total");
+
+        lista.innerHTML ="";
+
+        let soma = 0;
+
+        carrinho.forEach(item => { 
+            soma+= item.preco;
+
+            lista.innerHTML += `
+            <li class="list-group-item d-flex justify-content-between">
+                ${item.nome}
+                <span>R$ ${item.preco.toFixed(2)}</span>
+                </li>
+                `;
+        });
+
+        contador.innerText = carrinho.length;
+        total.innerText = soma.toFixed(2);
+    }
+    
+    function finalizarCompra() {
+      if(carrinho.length === 0) {
+      alert("Seu carrinho está vazio!");
+      return;
+      }
+
+      alert("Compra finalizada!");
+
+      carrinho = [];
+      atualizarCarrinho();    
+    }
+   
+</script>
+</html>
