@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitta</title>
+    <style>
+        body{
+            background-color: #efefef;
+            margin: 0;
+        }
+        
+        .container{
+            background-color: #ffd8e7;
+            width: 94%; 
+            margin: 0 auto; 
+            border-radius: 7px; 
+            overflow: hidden;
+        }
+
+        /*topo*/
+        .topo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0 20px;
+        }
+
+        .topo img {
+            width: 650px;
+            max-width: 90%;
+        }
+
+        /*imagem da médica*/
+        .imagem-medica {
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: stretch;
+        }
+
+        .imagem-medica img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: left center;
+            display: block;
+        }
+
+        .inicio {
+            width: 95%;
+            margin: auto;
+            min-height: 450px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .texto-vitta {
+            width: 50%;
+            padding: 20px 28px 15px 20px;
+
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+
+            box-sizing: border-box;
+        
+        }
+
+        .texto-vitta p { 
+            font-size: 25px; 
+            line-height: 1.65; 
+            text-align: justify; 
+            margin: 0; 
+            color: #5170ff; 
+            width: 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header class="topo">
+        <img src="img/img2.png" alt="O jeito Vitta de cuidar">
+    </header>
+    <div class="container">
+        <main class="inicio">
+            <div class="imagem-medica">
+            <img src="img/img1.png" alt="Pediatra">
+        </div>
+            
+            <div class="texto-vitta">
+                <p>A Vitta nasceu com o propósito de oferecer um cuidado pediátrico acolhedor, humanizado e atento ás necessidades de cada criança, acompanhando de perto cada fase do seu crescimento.
+                    <br><br>
+                    Nosso compromisso é tornar cada encontro uma experiência de cuidado, confiança e carinho, construindo uma relação próxima com as famílias e contribuindo para que cada criança cresça com saúde, tranquilidade e todo o suporte necessário em sua jornada
+                </p>
+            </div>
+        </main>
+        
+    </div>
+</body>
+</html>
